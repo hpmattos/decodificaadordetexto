@@ -28,18 +28,23 @@ function codificar(texto) {
 
 function decodificar(texto) {
   // Decodifica o texto usando o mapa
-  return texto.replace(/[\d]{1}/g, caractere => decodificacao[caractere]);
+  let temp = texto;
+  Object.keys(decodificacao).map(key => {
+    temp = temp.replaceAll(key, decodificacao[key]);
+  })
+  return temp;
+  
 }
 
-function atualizarResultado() {
+function atualizarResultado(criptografar) {
   const texto = textoInput.value;
-  const tipo = botaoCriptografar.classList.contains('ativo') ? 'criptografar' : 'descriptografar';
+  
   let resultadoTexto;
 
   // inicialmente desabilita o botão de copiar 
   botaoCopiar.disabled = true;
 
-  if (tipo === 'criptografar') {
+  if (criptografar) {
     resultadoTexto = codificar(texto);
   } else {
     resultadoTexto = decodificar(texto);
@@ -64,13 +69,13 @@ function atualizarResultado() {
 botaoCriptografar.addEventListener('click', () => {
   botaoCriptografar.classList.add('ativo');
   botaoDescriptografar.classList.remove('ativo');
-  atualizarResultado();
+  atualizarResultado(true);
 });
 
 botaoDescriptografar.addEventListener('click', () => {
   botaoCriptografar.classList.remove('ativo');
   botaoDescriptografar.classList.add('ativo');
-  atualizarResultado();
+  atualizarResultado(false);
 });
 
 botaoCopiar.addEventListener('click', () => {
@@ -84,3 +89,4 @@ botaoCopiar.addEventListener('click', () => {
 
 // Chama o atualizarResultado inicialmene para mostrar o ressultado vazio
 atualizarResultado();
+document.getElementById("texto").focus();
