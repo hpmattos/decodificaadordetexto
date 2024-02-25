@@ -1,0 +1,92 @@
+/* Redefinição de estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #540770;
+    background-color: #dbb3f0;
+}
+
+/* Estilo da logo */
+.logo {
+    display: flexbox;
+    margin-bottom: 0%;
+    width: 20%;
+    border-radius: 300px;
+    transform: scale(0.8);
+}
+
+/* Estilo da seção principal */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* Estilo da seção do decodificador */
+section {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #45df5f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da caixa de texto */
+#texto {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #45df5f;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilo dos botões */
+
+.botoes {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #45df5f;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    width: 150px;
+    margin: 0.2em;
+}
+
+button.ativo {
+    background-color: #94faa5;
+}
+
+button:hover {
+    background-color: #94faa5;
+}
+
+/* Estilo da área de resultado */
+#resultado {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #45df5f;
+    border-radius: 5px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    background-color: white;
+}

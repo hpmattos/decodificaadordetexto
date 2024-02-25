@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="main">
+        <img src="umagens/logo1.png" class="logo" alt="Logo">
+
+        <section>
+            <h1>Decodificador</h1>
+            <div class="container">
+                <div class="main">
+                    <img src="umagens/charada.jpg" alt="charada" id="charada">
+                    <label for="texto">Apenas letras minúsculas e sem acento</label>
+                    <textarea id="texto" name="texto" placeholder="Digite seu texto aqui"></textarea>
+                </div>
+
+                <div class="container main">
+                    <div class="botoes">
+                        <button id="criptografar" class="ativo">Criptografar</button>
+                        <button id="descriptografar">Descriptografar</button>
+                        <button id="copiar" disabled>Copiar</button>
+                    </div>
+                    <div id="resultado"></div>
+                </div>
+        </section>
+
+        <footer>
+            <p>Desenvolvido por Hanna Mattos</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
